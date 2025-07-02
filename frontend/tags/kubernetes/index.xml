@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on Chetan&#39;s Portfolio</title>
+    <link>https://chetan-thapliyal.cloud/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Chetan&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <atom:link href="https://chetan-thapliyal.cloud/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Secure CI/CD Pipeline</title>
+      <link>https://chetan-thapliyal.cloud/projects/202403-end-to-end-secure-cicd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chetan-thapliyal.cloud/projects/202403-end-to-end-secure-cicd/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://chetan-thapliyal.cloud/projects/202403-end-to-end-secure-cicd/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

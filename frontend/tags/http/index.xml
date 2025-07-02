@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTP on Chetan&#39;s Portfolio</title>
+    <link>https://chetan-thapliyal.cloud/tags/http/</link>
+    <description>Recent content in HTTP on Chetan&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <atom:link href="https://chetan-thapliyal.cloud/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Building a Simple Web Server with Go</title>
+      <link>https://chetan-thapliyal.cloud/projects/202310-building-a-simple-web-server-with-go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chetan-thapliyal.cloud/projects/202310-building-a-simple-web-server-with-go/</guid>
+      <description>A simple web server implemented in Go, serving static files and handling basic HTTP requests.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://chetan-thapliyal.cloud/projects/202310-building-a-simple-web-server-with-go/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

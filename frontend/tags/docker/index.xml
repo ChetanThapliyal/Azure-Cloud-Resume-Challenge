@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Chetan&#39;s Portfolio</title>
+    <link>https://chetan-thapliyal.cloud/tags/docker/</link>
+    <description>Recent content in Docker on Chetan&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+    <atom:link href="https://chetan-thapliyal.cloud/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Deploying Portfolio with Multistage Docker Builds</title>
+      <link>https://chetan-thapliyal.cloud/projects/202312-hugo-portfolio-multistage-docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chetan-thapliyal.cloud/projects/202312-hugo-portfolio-multistage-docker/</guid>
+      <description>Optimize Docker images for a Hugo website using distroless builds.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://chetan-thapliyal.cloud/projects/202312-hugo-portfolio-multistage-docker/feature.png" />
+    </item>
+    
+    <item>
+      <title>Secure CI/CD Pipeline</title>
+      <link>https://chetan-thapliyal.cloud/projects/202403-end-to-end-secure-cicd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chetan-thapliyal.cloud/projects/202403-end-to-end-secure-cicd/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://chetan-thapliyal.cloud/projects/202403-end-to-end-secure-cicd/feature.png" />
+    </item>
+    
+    <item>
+      <title>Microservices Deployment on AKS with GitOps</title>
+      <link>https://chetan-thapliyal.cloud/projects/202406-argocd-and-aks-microservices-deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chetan-thapliyal.cloud/projects/202406-argocd-and-aks-microservices-deployment/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://chetan-thapliyal.cloud/projects/202406-argocd-and-aks-microservices-deployment/feature.png" />
+    </item>
+    
+    <item>
+      <title>Deploying and Scaling 3-tier app with GKE</title>
+      <link>https://chetan-thapliyal.cloud/projects/202407-deploying-and-scaling-3-tier-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chetan-thapliyal.cloud/projects/202407-deploying-and-scaling-3-tier-app/</guid>
+      <description>Deploying a YelpCamp application (a full-stack website for campground reviews) across various environments using Cloud DevOps practices.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://chetan-thapliyal.cloud/projects/202407-deploying-and-scaling-3-tier-app/feature.png" />
+    </item>
+    
+  </channel>
+</rss>
