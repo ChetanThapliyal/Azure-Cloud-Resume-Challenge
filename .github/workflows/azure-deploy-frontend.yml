@@ -1,0 +1,47 @@
+name: Deploy Frontend to Azure Blob Storage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Upload to Azure Blob Storage
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.30.0
+          inlineScript: |
+            echo "Starting upload to Azure Blob Storage..."
+            az storage blob upload-batch \
+              --account-name "${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}" \
+              --destination "${{ secrets.AZURE_BLOB_CONTAINER_NAME }}" \
+              --source frontend \
+              --overwrite true \
+              --auth-mode login
+
+            echo "Frontend deployment to Azure Blob Storage completed."
+
+      - name: Purge Azure CDN Endpoint
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.30.0
+          inlineScript: |
+            echo "Purging Azure CDN endpoint..."
+            az cdn endpoint purge \
+              --profile-name cdn-crc-profile-01 \
+              --name crc-cdn-endpoint \
+              --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
+              --content-paths "/*"
+            echo "CDN purge completed."
