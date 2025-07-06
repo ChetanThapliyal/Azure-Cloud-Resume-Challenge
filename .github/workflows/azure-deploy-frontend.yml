@@ -28,7 +28,7 @@ jobs:
               --account-name "${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}" \
               --destination "${{ secrets.AZURE_BLOB_CONTAINER_NAME }}" \
               --source frontend \
-              --overwrite true \
+              --overwrite \
               --auth-mode login
 
             echo "Frontend deployment to Azure Blob Storage completed."

@@ -55,6 +55,7 @@ This project demonstrates proficiency in cloud technologies by implementing:
 
 
 ## Resources
+[az storage blob upload-batch documentation](https://learn.microsoft.com/cli/azure/storage/blob#az_storage_blob_upload_batch)
 
 ---
 
