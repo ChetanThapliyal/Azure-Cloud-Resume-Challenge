@@ -31,26 +31,33 @@ jobs:
       - name: Upload to Azure Blob Storage
         uses: azure/CLI@v1
         with:
-          azcliversion: 2.30.0
+          azcliversion: latest
           inlineScript: |
-            echo "Starting upload to Azure Blob Storage..."
+            echo "Clearing old content from Azure Blob Storage..."
+            az storage blob delete-batch \
+              --account-name "${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}" \
+              --source "\$web"
+
+            echo "Uploading new build to Azure Blob Storage..."
             az storage blob upload-batch \
               --account-name "${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}" \
               --destination "\$web" \
               --source frontend/public \
-              --auth-mode login
+              --overwrite
 
             echo "Frontend deployment to Azure Blob Storage completed."
 
-      - name: Purge Azure CDN Endpoint
+      - name: Purge Azure Front Door Cache
         uses: azure/CLI@v1
         with:
-          azcliversion: 2.30.0
+          azcliversion: latest
           inlineScript: |
-            echo "Purging Azure CDN endpoint..."
-            az cdn endpoint purge \
+            echo "Purging Azure Front Door endpoint..."
+            az afd endpoint purge \
+              --endpoint-name crc-cdn-endpoint \
               --profile-name cdn-crc-profile-01 \
-              --name crc-cdn-endpoint \
               --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}" \
-              --content-paths "/*"
-            echo "CDN purge completed."
+              --content-paths "/*" \
+              --domains az.chetan-thapliyal.cloud
+            echo "Front Door purge completed."
+
