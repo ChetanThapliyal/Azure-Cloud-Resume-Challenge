@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:  100vh;
+            margin:  0;
+        }
+        .container {
+            text-align: center;
+        }
+        .container h1 {
+            font-size:  4rem;
+            color: #333;
+        }
+        .container p {
+            font-size:  1.5rem;
+            color: #666;
+        }
+        .container a {
+            font-size:  1.2rem;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .container a:hover {
+            text-decoration: underline;
+        }
+        .container button {
+            font-size:  1.2rem;
+            padding:  0.5rem  1rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius:  5px;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! The page you're looking for doesn't exist.</p>
+        <p>But don't worry, you can find your way back to the <a href="/">homepage</a>.</p>
+        <button onclick="goBack()">Go Back</button>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

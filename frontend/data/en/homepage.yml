@@ -1,0 +1,107 @@
+######################### Banner ###########################
+banner:
+  enable : true
+  title :  "Hey, I'm Chetan Thapliyal **!**"
+  subtitle : "AI and Cloud Engineer"
+  social : true
+  # social icons comes from `config.toml` file.
+
+
+####################### About ##############################
+about:
+  enable : true
+  title : ""
+  image : "images/author.jpg"
+  content : "I'm an engineer at heart with a passion for turning complex challenges into elegant, scalable solutions. My journey began with Mechanical Engineering, but my curiosity soon led me into the world of IT and Cloud computing — where I discovered the thrill of building, automating, and securing modern infrastructure.
+
+
+  With a background in both mechanical engineering and IT, I bring a unique blend of technical expertise and exceptional communication skills to the table. Currently focused on Cloud Engineering (Azure, GCP, AWS), Scalable Infrastructure Design, Cloud Security, Serverless Computing, and DevOps automation.
+  "
+
+
+
+####################### Education ###########################
+education:
+  enable : true
+  title : "Education"
+  education_item:
+    - name : "B.Tech. Mechanical Engineering"
+      duration : "2010 - 2014"
+      academy : "Uttarakhand Technical University"
+
+
+####################### Expertise ###########################
+expertise:
+  enable : true
+  title : "Expertise"
+  expertise_item:
+    - name : "Cloud Engineering & Support"
+      content : "Azure, Google Cloud Platform, AWS <br> Infrastructure Design & Management"
+
+    - name : "DevOps & Automation"
+      content : "Docker, Kubernetes, Terraform <br> GitHub Actions, Jenkins, CI/CD Pipelines"
+
+    - name : "Cloud Security & Compliance"
+      content : "Identity & Access Management <br> Data Protection & Resilience"
+
+    - name : "Serverless & Microservices"
+      content : "Azure Functions, Cloud Run <br> Event-driven Architecture"
+
+
+####################### Experience ###########################
+# Note: GoFolium doesn't have a native experience section in homepage.yml.
+# Experience data is shown via the "publication" or "talk" sections,
+# or can be added as custom content later.
+
+
+####################### Publication ###########################
+publication:
+  enable : false
+  title : "Publications"
+
+
+########################### Talk ##############################
+talk:
+  enable : false
+  title : "Recent & Upcoming Talks"
+
+
+########################## Projects ###########################
+project:
+  enable : true
+  title : "My Projects"
+  # projects item comes from `content/**/projects/` folder.
+
+
+########################### Blog ##############################
+blog:
+  enable : false
+  title : "Blog Post"
+
+
+
+########################## Contact ############################
+# contact form
+contact_form:
+  enable : true
+  title : "Contact Me"
+  contact_form_action : "#" #contact form works with https://formspree.io
+  name_label : "Your Name"
+  email_label : "Your Email"
+  textarea_label : "Your Message"
+  button_label : "Send Now"
+
+# contact info
+contact_info:
+  enable : true
+  title : "Get In Touch"
+  content : "I'm always open to interesting conversations and collaboration. Whether it's about cloud engineering, DevOps, or just a friendly chat — shoot me a message!"
+  contact_item:
+    - icon : "ti-email"
+      id : "chetan.thapliyal@outlook.com"
+
+    - icon : "ti-github"
+      id : "github.com/ChetanThapliyal"
+
+    - icon : "ti-linkedin"
+      id : "linkedin.com/in/chetanthapliyal"

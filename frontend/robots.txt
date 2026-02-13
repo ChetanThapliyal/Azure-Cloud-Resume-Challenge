@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://chetan-thapliyal.cloud/sitemap.xml

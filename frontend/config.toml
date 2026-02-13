@@ -1,0 +1,118 @@
+######################## default configuration ####################
+baseURL = "/"
+title = "Chetan Thapliyal | Portfolio"
+theme = "gofolium"
+[pagination]
+pagerSize = 4
+# post excerpt
+summaryLength = "10"
+# only english
+defaultContentLanguage = "en"
+
+# unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/particles/particles.min.js"
+[[params.plugins.js]]
+link = "plugins/particles/stats.min.js"
+[[params.plugins.js]]
+link = "plugins/reading-time/readingTime.min.js"
+
+
+############################## navigation ###############################
+
+# main menu
+[[menu.main]]
+name = "home"
+URL = "home"
+weight = 1
+
+[[menu.main]]
+name = "about"
+URL = "about"
+weight = 2
+
+[[menu.main]]
+name = "project"
+URL = "project"
+weight = 3
+  
+[[menu.main]]
+name = "blog"
+URL = "https://blog.chetan-thapliyal.cloud"
+weight = 4
+
+[[menu.main]]
+name = "contact"
+URL = "contact"
+weight = 5
+
+
+#################### default parameters ################################
+[params]
+logo = "images/logo.png"
+# Meta data
+description = "Chetan Thapliyal — AI and Cloud Engineer Portfolio"
+author = "Chetan Thapliyal"
+# Google Analitycs
+google_analitycs_id = "" # your id
+
+# body particles
+particles = true
+
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use jpg, png, svg or gif format.
+
+# Navigation button
+[params.navigation_button]
+enable = true
+label = "contact"
+link = "contact"
+  
+############################# social site ########################
+[[params.social]]
+title = "github"
+icon = "ti-github" # themify icon : https://themify.me/themify-icons
+link = "https://github.com/ChetanThapliyal"
+
+[[params.social]]
+title = "linkedin"
+icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
+link = "https://www.linkedin.com/in/chetanthapliyal/"
+
+[[params.social]]
+title = "email"
+icon = "ti-email" # themify icon : https://themify.me/themify-icons
+link = "mailto:chetan.thapliyal@outlook.com"
+
+[[params.social]]
+title = "world"
+icon = "ti-world" # themify icon : https://themify.me/themify-icons
+link = "https://blog.chetan-thapliyal.cloud"
+
+
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+# copyright
+copyright = "Copyright &copy; 2025 Chetan Thapliyal"

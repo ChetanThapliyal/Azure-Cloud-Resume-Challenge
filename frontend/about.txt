@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Alexandria
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/alexandria/v3/UMBCrPdDqW66y0Y2usFeQCH18mulUxBvI9p7SabHHJ8BRq0b.ttf
-- Font License: undefined)
