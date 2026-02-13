@@ -48,7 +48,7 @@ flowchart LR
 
 | Layer | Technology | Purpose |
 |:---|:---|:---|
-| **Frontend** | Hugo + Gofolium theme | Static site generator for the portfolio |
+| **Frontend** | Hugo  | Static site generator for the portfolio |
 | **Hosting** | Azure Blob Storage (`$web`) | Static website hosting |
 | **CDN / TLS** | Azure Front Door (Standard) | Global edge caching, custom domain, managed TLS |
 | **API** | Azure Functions (Python) | Serverless REST API for visitor counter |
