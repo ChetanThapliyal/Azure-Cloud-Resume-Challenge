@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "/"
+baseURL = "https://az.chetan-thapliyal.cloud/"
 title = "Chetan Thapliyal | Portfolio"
 theme = "gofolium"
 [pagination]
