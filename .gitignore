@@ -179,4 +179,15 @@ frontend/public/
 frontend/resources/_gen/
 frontend/.hugo_build.lock
 
-instruction.md
+# Terraform / Infrastructure Secrets & Artifacts
+infrastructure/.terraform/
+infrastructure/output/
+infrastructure/*.tfvars
+infrastructure/*.tfstate*
+infrastructure/*.out
+infrastructure/*.err
+infrastructure/aztfexportResourceMapping.json
+infrastructure/.terraform.lock.hcl
+
+# Documentation / Prep
+docs/interview-prep/

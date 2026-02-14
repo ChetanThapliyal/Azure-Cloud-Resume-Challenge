@@ -11,7 +11,7 @@
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?logo=terraform&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-[**🌐 Live Site**](https://az.chetan-thapliyal.cloud) · [**📖 Blog**](https://blog.chetan-thapliyal.cloud) · [**📄 Docs**](docs/)
+[**🌐 Live Site**](https://az.chetan-thapliyal.cloud) · [**📖 Blog**](https://blog.chetan-thapliyal.cloud) · [**📄 Migration Runbook**](docs/frontdoorMigration.md) · [**🏗️ IaC Docs**](docs/terraform-iac.md)
 
 </div>
 
@@ -48,35 +48,39 @@ flowchart LR
 
 | Layer | Technology | Purpose |
 |:---|:---|:---|
-| **Frontend** | Hugo  | Static site generator for the portfolio |
-| **Hosting** | Azure Blob Storage (`$web`) | Static website hosting |
-| **CDN / TLS** | Azure Front Door (Standard) | Global edge caching, custom domain, managed TLS |
-| **API** | Azure Functions (Python) | Serverless REST API for visitor counter |
-| **Database** | Azure Cosmos DB | NoSQL store for visitor count persistence |
-| **IaC** | Terraform | Declarative infrastructure provisioning |
-| **CI/CD** | GitHub Actions | Automated build, deploy, and cache purge on push |
-| **DNS** | Custom domain (`az.chetan-thapliyal.cloud`) | Branded endpoint with HTTPS |
+| **Frontend** | Hugo (GoFolium) | Modern, responsive portfolio theme with HSL-tailored design |
+| **Hosting** | Azure Blob Storage | Static website hosting via `$web` container |
+| **CDN / TLS** | Azure Front Door | Global edge caching, managed TLS, and secure routing |
+| **API** | Azure Functions (Python) | Serverless backend using the Table API for visitor tracking |
+| **Database** | Azure Cosmos DB | Global persistence using the Table API (Serverless) |
+| **IaC** | Terraform | Production-grade infrastructure automation |
+| **CI/CD** | GitHub Actions | Fully automated Build -> Deploy -> Caching pipeline |
+| **DNS** | Cloudflare | Custom domain management with `az` subdomain |
 
 ## Project Structure
 
 ```
 Azure-Cloud-Resume-Challenge/
-├── frontend/                    # Hugo static site
-│   ├── config.toml              # Site configuration
-│   ├── content/english/         # Page content (projects, blogs, author)
-│   ├── layouts/partials/        # Template overrides
-│   ├── static/images/           # Logo, favicon, project images
-│   └── themes/gofolium/         # Hugo theme
-├── backend/                     # Serverless API
-│   ├── visitorCounter/          # Azure Function — visitor counter
-│   │   ├── __init__.py          # Function handler (Cosmos DB binding)
-│   │   └── function.json        # Input/output bindings
-│   ├── host.json                # Function host configuration
-│   └── requirements.txt         # Python dependencies
-├── infrastructure/              # Terraform IaC
-├── docs/                        # Documentation
-│   ├── deployment.md            # Build & deploy guide
-│   └── frontdoorMigration.md    # CDN → Front Door migration runbook
+├── backend/                    # Serverless API (Python 3.12)
+│   ├── visitorCounter/         # Azure Function — visitor counter
+│   ├── host.json               # Function host configuration
+│   └── requirements.txt        # Table API dependencies
+├── docs/                       # Project Documentation
+│   ├── deployment.md           # Build & deploy guide
+│   ├── frontdoorMigration.md   # CDN → Front Door migration runbook
+│   └── terraform-iac.md        # Infrastructure as Code documentation
+├── frontend/                   # Hugo Portfolio site
+│   ├── config.toml             # Gofolium configuration
+│   ├── content/english/         # Bio, projects, and author profile
+│   ├── layouts/                # Template overrides (Project cards, Header)
+│   ├── static/images/          # Assets and project thumbnails
+│   └── themes/gofolium/         # Portfolio theme
+├── infrastructure/             # Terraform Managed Resources
+│   ├── compute.tf              # Functions, App Insights
+│   ├── database.tf             # Cosmos DB (Table API)
+│   ├── networking.tf           # Front Door & Custom Domains
+│   ├── storage.tf              # Frontend & Backend Storage
+│   └── main.tf/variables.tf    # Global configuration
 └── .github/workflows/
     └── azure-deploy-frontend.yml  # CI/CD pipeline
 ```
@@ -183,6 +187,7 @@ Checkout → Setup Hugo → Build (--minify) → Azure Login → Delete stale bl
 |:---|:---|
 | [deployment.md](docs/deployment.md) | Step-by-step build and deploy guide with troubleshooting |
 | [frontdoorMigration.md](docs/frontdoorMigration.md) | Azure CDN → Front Door migration runbook |
+| [terraform-iac.md](docs/terraform-iac.md) | Deep dive into the Terraform IaC implementation |
 
 ## Key Learnings
 
