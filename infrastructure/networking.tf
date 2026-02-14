@@ -53,6 +53,8 @@ resource "azurerm_cdn_frontdoor_route" "main" {
   patterns_to_match      = ["/*"]
   forwarding_protocol    = "MatchRequest"
   https_redirect_enabled = true # SECURITY FIX
+
+  cdn_frontdoor_custom_domain_ids = [azurerm_cdn_frontdoor_custom_domain.main.id]
 }
 
 resource "azurerm_cdn_frontdoor_custom_domain" "main" {
