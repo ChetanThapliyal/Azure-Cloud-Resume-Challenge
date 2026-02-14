@@ -71,6 +71,7 @@ description = "Chetan Thapliyal — AI and Cloud Engineer Portfolio"
 author = "Chetan Thapliyal"
 # Google Analitycs
 google_analitycs_id = "" # your id
+visitor_counter_endpoint = "https://<your-function-app>.azurewebsites.net/api/visitorCounter"
 
 # body particles
 particles = true

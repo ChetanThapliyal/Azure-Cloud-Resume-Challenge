@@ -19,6 +19,10 @@
           {{ end }}
         </ul>
         {{ end }}
+        <div class="mt-5">
+          <p class="h5 text-light">Visitors: <span id="visitor-count"
+              class="text-white font-weight-bold">Loading...</span></p>
+        </div>
       </div>
     </div>
   </div>
@@ -61,7 +65,8 @@
           <div class="col-lg-5 col-sm-6 mb-4">
             <h4 class="title-border">{{ .name }}</h4>
             <p>{{ .duration }}
-            <br>{{ .academy }}</p>
+              <br>{{ .academy }}
+            </p>
           </div>
           {{ end }}
         </div>

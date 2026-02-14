@@ -32,7 +32,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             logging.info("New visitor count entry created.")
         return func.HttpResponse(
             f"Visitor count updated successfully. Current count: {entity['count']}",
-            status_code=200"
+            status_code=200
         )
     except Exception as e:
         logging.error(f"An error occurred: {e}")

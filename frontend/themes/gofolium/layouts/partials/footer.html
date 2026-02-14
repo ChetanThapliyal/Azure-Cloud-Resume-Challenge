@@ -14,6 +14,31 @@
   </div>
 </footer>
 
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const counterEndpoint = "{{ .Site.Params.visitor_counter_endpoint }}";
+    if (counterEndpoint && !counterEndpoint.includes("<your-function-app>")) {
+      fetch(counterEndpoint)
+        .then(response => response.text())
+        .then(data => {
+          // Assuming the backend returns "Visitor count updated successfully. Current count: X"
+          const count = data.match(/Current count: (\d+)/);
+          if (count && count[1]) {
+            document.getElementById('visitor-count').innerText = count[1];
+          } else {
+            document.getElementById('visitor-count').innerText = "Error";
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching visitor count:', error);
+          document.getElementById('visitor-count').innerText = "Unavailable";
+        });
+    } else {
+      document.getElementById('visitor-count').innerText = "Not Configured";
+    }
+  });
+</script>
+
 
 {{ "<!-- JS Plugins -->" | safeHTML }}
 {{ range .Site.Params.plugins.js}}

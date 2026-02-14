@@ -178,3 +178,5 @@ __azurite_db*__.json
 frontend/public/
 frontend/resources/_gen/
 frontend/.hugo_build.lock
+
+instruction.md
