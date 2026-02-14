@@ -130,6 +130,34 @@ az afd endpoint purge \
   --content-paths "/*"
 ```
 
+### Infrastructure Management (IaC)
+
+This project uses **Terraform** to provision and manage Azure resources. The configuration is modular and stored in the `infrastructure/` directory.
+
+#### Provisioning Steps
+
+1. **Initialize Terraform**:
+
+   ```bash
+   cd infrastructure
+   terraform init
+   ```
+
+2. **Review the Plan**:
+
+   ```bash
+   terraform plan -var-file="secrets.tfvars"
+   ```
+
+3. **Apply Changes**:
+
+   ```bash
+   terraform apply -var-file="secrets.tfvars" -auto-approve
+   ```
+
+> [!NOTE]
+> The infrastructure includes Azure Front Door, Blob Storage (Static Website), Azure Functions (Python 3.12), and Cosmos DB (Serverless SQL with Table API capability).
+
 > [!TIP]
 > Pushing to `main` triggers the GitHub Actions workflow, which handles the full build → upload → purge pipeline automatically.
 
@@ -167,7 +195,7 @@ Checkout → Setup Hugo → Build (--minify) → Azure Login → Delete stale bl
 
 ## Acknowledgements
 
-This project is part of the [**Cloud Resume Challenge**](https://cloudresumechallenge.dev/) by [Forrest Brazeal](https://forrestbrazeal.com/) — adapted for Microsoft Azure.
+This project is part of the [**Cloud Resume Challenge**](https://cloudresumechallenge.dev/) by [Forrest Brazeal](https://forrestbrazeal.com/) - adapted for Microsoft Azure.
 
 ---
 
