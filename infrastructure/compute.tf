@@ -25,7 +25,7 @@ resource "azurerm_linux_function_app" "main" {
   }
 
   app_settings = {
-    "COSMOS_DB_CONNECTION_STRING"    = azurerm_cosmosdb_account.main.primary_sql_connection_string
+    "COSMOS_DB_CONNECTION_STRING"    = "DefaultEndpointsProtocol=https;AccountName=${azurerm_cosmosdb_account.main.name};AccountKey=${azurerm_cosmosdb_account.main.primary_key};TableEndpoint=https://${azurerm_cosmosdb_account.main.name}.table.cosmos.azure.com:443/;"
     "APPINSIGHTS_INSTRUMENTATIONKEY" = azurerm_application_insights.main.instrumentation_key
   }
 

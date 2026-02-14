@@ -3,6 +3,7 @@ import azure.functions as func
 import logging
 from azure.data.tables import TableServiceClient
 from azure.core.exceptions import ResourceNotFoundError
+import json
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     try:
@@ -32,7 +33,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             logging.info("New visitor count entry created.")
             logging.info("New visitor count entry created.")
         
-        import json
         return func.HttpResponse(
             body=json.dumps({"count": entity['count']}),
             mimetype="application/json",
