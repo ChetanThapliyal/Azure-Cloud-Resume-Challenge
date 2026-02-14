@@ -30,13 +30,18 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             }
             table_client.create_entity(entity=entity)
             logging.info("New visitor count entry created.")
+            logging.info("New visitor count entry created.")
+        
+        import json
         return func.HttpResponse(
-            f"Visitor count updated successfully. Current count: {entity['count']}",
+            body=json.dumps({"count": entity['count']}),
+            mimetype="application/json",
             status_code=200
         )
     except Exception as e:
         logging.error(f"An error occurred: {e}")
         return func.HttpResponse(
-            f"An error occurred: {str(e)}",
+            body=json.dumps({"error": str(e)}),
+            mimetype="application/json",
             status_code=500
         )

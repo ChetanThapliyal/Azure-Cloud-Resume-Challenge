@@ -37,6 +37,10 @@ resource "azurerm_cdn_frontdoor_origin" "main" {
   origin_host_header             = "${var.storage_account_frontend}.z13.web.core.windows.net"
   priority                       = 1
   weight                         = 1000
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "azurerm_cdn_frontdoor_route" "main" {

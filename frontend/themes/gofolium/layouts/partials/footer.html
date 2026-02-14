@@ -19,13 +19,12 @@
     const counterEndpoint = "{{ .Site.Params.visitor_counter_endpoint }}";
     if (counterEndpoint && !counterEndpoint.includes("<your-function-app>")) {
       fetch(counterEndpoint)
-        .then(response => response.text())
+        .then(response => response.json())
         .then(data => {
-          // Assuming the backend returns "Visitor count updated successfully. Current count: X"
-          const count = data.match(/Current count: (\d+)/);
-          if (count && count[1]) {
-            document.getElementById('visitor-count').innerText = count[1];
+          if (data && data.count) {
+            document.getElementById('visitor-count').innerText = data.count;
           } else {
+            console.error('Invalid visitor count data:', data);
             document.getElementById('visitor-count').innerText = "Error";
           }
         })
